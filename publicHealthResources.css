@@ -2,7 +2,7 @@
   * element that contains the map. */
 #map{
 	position:relative;
-    height: 400px;
+    height: 300px;
 	width: 100%;
 }
 /* Optional: Makes the sample page fill the window. */
@@ -19,7 +19,7 @@ html{
 
 #main{
 	background-color:white;
-	height:100%;
+	
 	margin-left:5%;
 	width:90%;
 	}
