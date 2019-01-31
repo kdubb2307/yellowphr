@@ -5,7 +5,7 @@ function initMap() {
         center: {lat: 32.3792, lng: -86.3077}
 	}
 		
-	//creates the map
+	//creates pharmacy map
     var map = new google.maps.Map(document.getElementById('map'),options);
 	
 
@@ -31,6 +31,38 @@ function initMap() {
 	var ourMed= new google.maps.Marker({position:{lat: 32.360512, lng: -86.137199}, map:map, title:'OurMed'});
 	var jacksonClinic= new google.maps.Marker({position:{lat: 32.366654, lng: -86.284253}, map:map, title:'The Jackson Clinic and Urgent Care'});
 	
+	
+	/*.......................................................................*/
+	var options2 = 
+	{
+		zoom: 12,
+        center: {lat: 32.3792, lng: -86.3077}
+	}
+	
+	//creates map for park locations
+	var parks= new google.maps.Map(document.getElementById('parksMap'),options2);
+	
+	
+	var blountPark= new google.maps.Marker({position:{lat:32.351860,lng:-86.206010}, map:parks, title:'Blount Cultural Park'});
+	var shakespeare= new google.maps.Marker({position:{lat:32.349907,lng:-86.212830}, map:parks, title:'Alabama Shakespeare Festival'});
+	var idaBellYoung= new google.maps.Marker({position:{lat:32.341910,lng:-86.214550}, map:parks, title:'Ida Bell Young Park'});
+	var vaughnRoad= new google.maps.Marker({position:{lat:32.350050,lng:-86.245010}, map:parks, title:'Vaughn Road Park'});
+	var hannahDaye= new google.maps.Marker({position:{lat:32.341710,lng:-86.205350}, map:parks, title:'Hannah Daye Ridling Bark Park'});
+	var woodmere= new google.maps.Marker({position:{lat:,lng:}, map:parks, title:'Woodmere Park'});
+	var gateway= new google.maps.Marker({position:{lat:32.354600,lng:-86.209790}, map:parks, title:'Gateway Park'});
+	var cloverdale= new google.maps.Marker({position:{lat:32.350180,lng:-86.292440}, map:parks, title:'Cloverdale Road Park'});
+	var oakPark= new google.maps.Marker({position:{lat:32.368150,lng:-86.287370}, map:parks, title:'Oak Park'});
+	var brendaBonner= new google.maps.Marker({position:{lat:32.367550,lng:-86.248650}, map:parks, title:'Brenda Bonner Park'});
+	var riverFront= new google.maps.Marker({position:{lat:32.379370,lng:-86.311120}, map:parks, title:'Riverfront Park'});
+	var legrandePark= new google.maps.Marker({position:{lat:32.351540,lng:-86.298880}, map:parks, title:'LeGrande Park'});
+	var woodsRvPark= new google.maps.Marker({position:{lat:32.323450,lng:-86.331340}, map:parks, title:'The Woods Rv Park'});
+	var audobonPark= new google.maps.Marker({position:{lat:32.348540,lng:-86.292900}, map:parks, title:'Audobon Park'});
+	var cloverdalePark= new google.maps.Marker({position:{lat:32.355440,lng:-86.292290}, map:parks, title:'Cloverdale Park'});
+	var darringtonPark= new google.maps.Marker({position:{lat:32.321810,lng:-86.259340}, map:parks, title:'Darrington/Ritchie (Dorchester) Park'});
+	var deanFainPark= new google.maps.Marker({position:{lat:32.359920,lng: -86.142520}, map:parks, title:'Dean Fain Park'});
+	var powderPark= new google.maps.Marker({position:{lat:32.380830,lng:-86.328030}, map:parks, title:'Powder Magazine Park'});
+	var dannellyPark= new google.maps.Marker({position:{lat:32.344150,lng:-86.260860}, map:parks, title:'Dannelly Park'});
+	/*.......................................................................*/
 	var geocoder = new google.maps.Geocoder();
 
         document.getElementById('submit').addEventListener('click', function() { geocodeAddress(geocoder, map);});
