@@ -26,6 +26,7 @@ html{
 	
 .spacer{
 	background-color:#80d4ff;
+	height:0.7em;
 }
 
 #header{
@@ -55,5 +56,6 @@ ul li {
 	list-style-type: none;
 	padding-left:10%;
 	padding-right:5%;
-}
+} 
+
 

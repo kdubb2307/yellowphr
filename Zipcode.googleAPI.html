@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
   <head>
     <title>Public Health Services</title>
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
@@ -10,12 +11,14 @@
 	
 	<script type="text/javascript" src="initMap.js"></script>	
   </head>
+  
+  
 <body id="backgroundColor">
 
 <header id="header">
 <div class="container">
 	<div class="row">
-		<div class="col-md-12">
+		<div class="col-sm-12 col-md-12">
 		<br>	<h1>Public Health Resources in Montgomery, Al.</h1>
 		</div> <!--end of column div //-->		
 	</div> <!--end of row div //-->
@@ -27,17 +30,7 @@
 <main id="main">
 <div class="container">
 
-	<div class="row">
-		<div class="col-sm-12 col-md-12">
-			<nav>
-				<ul>
-					<li><a href="Zipcode.googleAPI.html">Local Pharmacies</a></li>
-					<li><a href="#">Fitness Classes</a></li>
-					<li><a href="parks.html">Public Outdoor Spaces</a></li>
-				</ul>	
-			</nav>
-		</div>
-	</div> <br><br>
+	
 
 
 	<div class="row">
@@ -53,8 +46,22 @@
 	
 	<div class="row">
 	
-		<div class="col-sm-10 col-md-12">
+		<div class="col-sm-12 col-md-12">
 			<div id="map"> </div>
+			 
+		</div><!--end column div //-->
+	</div> <!--end row div //-->
+	
+	
+	<div class="row">
+	
+		<div class="col-sm-12 col-md-12">
+				<div class="btn-group">
+					<button type="button" class="btn btn-primary">Pharmacies</button>
+					<button type="button" class="btn btn-secondary">Recreational Parks</button>
+					<button type="button" class="btn btn-info">Gyms</button>
+				</div>
+			 
 		</div><!--end column div //-->
 	</div> <!--end row div //-->
 	
@@ -187,9 +194,8 @@
 	
 </div> <!--end of container div //-->	
  
-</main>      
-<script 
-	async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC0i4XFIHpvPRsyKX9WyUA92cJ1IjL6f2k&callback=initMap">
-</script>
+</main>   
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC0i4XFIHpvPRsyKX9WyUA92cJ1IjL6f2k&libraries=places&callback=initMap" async defer></script>
+
 </body>
 </html>
