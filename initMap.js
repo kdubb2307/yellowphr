@@ -3,7 +3,7 @@
  
  
  function initMap() {
-	 var montomgery= new google.maps.LatLng(32.3792, -86.3077);
+	 var montomgery= new google.maps.LatLng(32.3668052, -86.2999689);
 	 
 	 map= new google.maps.Map(document.getElementById('map'), {
 		 center: montomgery,
@@ -13,7 +13,7 @@
 	 //information for the nearbySearch
 	 var request={
 		 location:montomgery,
-		 radius: '4000',
+		 radius: '15000',
 		 type: 'pharmacy'
 	 };
 	 
@@ -45,23 +45,49 @@
 		 });
  }//end createMarker
  
+ 
+ var geocoder = new google.maps.Geocoder();
+
+        document.getElementById('submit').addEventListener('click', function() { geocodeAddress(geocoder, map);});
+		
+
+      function geocodeAddress(geocoder, resultsMap) {
+        var address = document.getElementById('address').value;
+        geocoder.geocode({'address': address}, function(results, status) {
+          if (status === 'OK') {
+            resultsMap.setCenter(results[0].geometry.location);
+           /* 
+			    Not Needed
+			var marker = new google.maps.Marker({
+            map: resultsMap,
+            position: results[0].geometry.location 
+            }); */
+          } else {
+            alert('Geocode was not successful for the following reason: ' + status);
+          }
+        });
+	};
+ 
+ 
+ 
  }//end initMap
  
  
  
  function parkMarkers(){
 	 
-	var montomgery= new google.maps.LatLng(32.3792, -86.3077);
+	var montomgery= new google.maps.LatLng(32.3668052, -86.2999689);
 	 
 	 map= new google.maps.Map(document.getElementById('map'), {
 		 center: montomgery,
-		 zoom:13
+		 zoom:13,
+		 
 	 });
 	 
 	 //information for the nearbySearch
 	 var request={
-		 location:montomgery,
-		 radius: '4000',
+		 location: montomgery,
+		 radius: '10000',
 		 type: 'park'
 	 };
 	 
@@ -97,7 +123,7 @@
  
  function gymMarkers(){
 	 
-	var montomgery= new google.maps.LatLng(32.3792, -86.3077);
+	var montomgery= new google.maps.LatLng(32.3668052, -86.2999689);
 	 
 	 map= new google.maps.Map(document.getElementById('map'), {
 		 center: montomgery,
@@ -107,7 +133,7 @@
 	 //information for the nearbySearch
 	 var request={
 		 location:montomgery,
-		 radius: '4000',
+		 radius: '10000',
 		 type: 'gym'
 	 };
 	 
@@ -138,5 +164,4 @@
 			 infowindow.open(map, this);
 		 });
  }//end createMarker 
-	 
- }//end gymMarkers
+}//end gymMarkers
