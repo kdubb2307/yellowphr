@@ -69,7 +69,6 @@
 	};
  
  
- 
  }//end initMap
  
  
@@ -160,8 +159,9 @@
 		 var infowindow = new google.maps.InfoWindow();
 		 
 		 google.maps.event.addListener(marker, 'click', function(){
-			 infowindow.setContent(place.name);
+			 
+			 infowindow.setContent(place.name + place.place_id.opening_hours);
 			 infowindow.open(map, this);
 		 });
- }//end createMarker 
+ }//end createMarker
 }//end gymMarkers
